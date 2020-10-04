@@ -6,7 +6,8 @@
     "start": "npx npm-run-all --parallel server client",
     "server": "npx nodemon ./server/index.js --ignore public --ignore bot/",
     "client": "npx webpack-dev-server --config webpack.dev.js",
-    "build": "npx webpack --config webpack.prod.js"
+    "build": "npx webpack --config webpack.prod.js",
+    "deploy": "gh-pages -d public"
   },
   "author": "timetocode // Alex",
   "license": "Apache 2.0",
@@ -16,6 +17,7 @@
     "pixi.js": "^5.1.5"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "nodemon": "1.19.3",
     "npm-run-all": "4.1.5",
     "terser-webpack-plugin": "^2.3.4",
